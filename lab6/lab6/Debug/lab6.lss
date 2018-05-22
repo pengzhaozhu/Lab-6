@@ -1,0 +1,939 @@
+
+lab6.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000066e  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000202  00802000  0000066e  00000702  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000003  00802202  00802202  00000904  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000904  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000934  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000050  00000000  00000000  00000974  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   0000416b  00000000  00000000  000009c4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00003c80  00000000  00000000  00004b2f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000008f4  00000000  00000000  000087af  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000084  00000000  00000000  000090a4  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00002d0b  00000000  00000000  00009128  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000119  00000000  00000000  0000be33  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000000d0  00000000  00000000  0000bf4c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 fe 00 	jmp	0x1fc	; 0x1fc <__ctors_end>
+   4:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+   8:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+   c:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  10:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  14:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  18:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  1c:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  20:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  24:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  28:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  2c:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  30:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  34:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  38:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  3c:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  40:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  44:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  48:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  4c:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  50:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  54:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  58:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  5c:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  60:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  64:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  68:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  6c:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  70:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  74:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  78:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  7c:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  80:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  84:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  88:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  8c:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  90:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  94:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  98:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  9c:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  a0:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  a4:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  a8:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  ac:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  b0:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  b4:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  b8:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  bc:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  c0:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  c4:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  c8:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  cc:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  d0:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  d4:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  d8:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  dc:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  e0:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  e4:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  e8:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  ec:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  f0:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  f4:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  f8:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+  fc:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 100:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 104:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 108:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 10c:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 110:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 114:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 118:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 11c:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 120:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 124:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 128:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 12c:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 130:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 134:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 138:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 13c:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 140:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 144:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 148:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 14c:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 150:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 154:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 158:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 15c:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 160:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 164:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 168:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 16c:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 170:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 174:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 178:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 17c:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 180:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 184:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 188:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 18c:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 190:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 194:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 198:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 19c:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 1a0:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 1a4:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 1a8:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 1ac:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 1b0:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 1b4:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 1b8:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 1bc:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 1c0:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 1c4:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 1c8:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 1cc:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 1d0:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 1d4:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 1d8:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 1dc:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 1e0:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 1e4:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 1e8:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 1ec:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 1f0:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 1f4:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+ 1f8:	0c 94 24 01 	jmp	0x248	; 0x248 <__bad_interrupt>
+
+000001fc <__ctors_end>:
+ 1fc:	11 24       	eor	r1, r1
+ 1fe:	1f be       	out	0x3f, r1	; 63
+ 200:	cf ef       	ldi	r28, 0xFF	; 255
+ 202:	cd bf       	out	0x3d, r28	; 61
+ 204:	df e3       	ldi	r29, 0x3F	; 63
+ 206:	de bf       	out	0x3e, r29	; 62
+ 208:	00 e0       	ldi	r16, 0x00	; 0
+ 20a:	0c bf       	out	0x3c, r16	; 60
+ 20c:	18 be       	out	0x38, r1	; 56
+ 20e:	19 be       	out	0x39, r1	; 57
+ 210:	1a be       	out	0x3a, r1	; 58
+ 212:	1b be       	out	0x3b, r1	; 59
+
+00000214 <__do_copy_data>:
+ 214:	12 e2       	ldi	r17, 0x22	; 34
+ 216:	a0 e0       	ldi	r26, 0x00	; 0
+ 218:	b0 e2       	ldi	r27, 0x20	; 32
+ 21a:	ee e6       	ldi	r30, 0x6E	; 110
+ 21c:	f6 e0       	ldi	r31, 0x06	; 6
+ 21e:	00 e0       	ldi	r16, 0x00	; 0
+ 220:	0b bf       	out	0x3b, r16	; 59
+ 222:	02 c0       	rjmp	.+4      	; 0x228 <__do_copy_data+0x14>
+ 224:	07 90       	elpm	r0, Z+
+ 226:	0d 92       	st	X+, r0
+ 228:	a2 30       	cpi	r26, 0x02	; 2
+ 22a:	b1 07       	cpc	r27, r17
+ 22c:	d9 f7       	brne	.-10     	; 0x224 <__do_copy_data+0x10>
+ 22e:	1b be       	out	0x3b, r1	; 59
+
+00000230 <__do_clear_bss>:
+ 230:	22 e2       	ldi	r18, 0x22	; 34
+ 232:	a2 e0       	ldi	r26, 0x02	; 2
+ 234:	b2 e2       	ldi	r27, 0x22	; 34
+ 236:	01 c0       	rjmp	.+2      	; 0x23a <.do_clear_bss_start>
+
+00000238 <.do_clear_bss_loop>:
+ 238:	1d 92       	st	X+, r1
+
+0000023a <.do_clear_bss_start>:
+ 23a:	a5 30       	cpi	r26, 0x05	; 5
+ 23c:	b2 07       	cpc	r27, r18
+ 23e:	e1 f7       	brne	.-8      	; 0x238 <.do_clear_bss_loop>
+ 240:	0e 94 72 01 	call	0x2e4	; 0x2e4 <main>
+ 244:	0c 94 35 03 	jmp	0x66a	; 0x66a <_exit>
+
+00000248 <__bad_interrupt>:
+ 248:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+0000024c <DAC>:
+	
+	return 0;
+}
+
+void DAC(void) {
+	DACA_CTRLA= DAC_ENABLE_bm | DAC_CH1EN_bm ;        //enable DAC, enable channel 1 output
+ 24c:	89 e0       	ldi	r24, 0x09	; 9
+ 24e:	80 93 00 03 	sts	0x0300, r24	; 0x800300 <__TEXT_REGION_LENGTH__+0x700300>
+	DACA_CTRLB=DAC_CHSEL_SINGLE1_gc;   //single-channel operation on channel 1
+ 252:	80 e2       	ldi	r24, 0x20	; 32
+ 254:	80 93 01 03 	sts	0x0301, r24	; 0x800301 <__TEXT_REGION_LENGTH__+0x700301>
+	DACA_CTRLC=DAC_REFSEL_AREFB_gc;  //AREF on PORTB as reference
+ 258:	88 e1       	ldi	r24, 0x18	; 24
+ 25a:	80 93 02 03 	sts	0x0302, r24	; 0x800302 <__TEXT_REGION_LENGTH__+0x700302>
+ 25e:	08 95       	ret
+
+00000260 <TIMER_INIT>:
+	
+}
+
+void TIMER_INIT(void) {
+	
+	TCC0_CNT=0x0000;   //set CNT to zero
+ 260:	10 92 20 08 	sts	0x0820, r1	; 0x800820 <__TEXT_REGION_LENGTH__+0x700820>
+ 264:	10 92 21 08 	sts	0x0821, r1	; 0x800821 <__TEXT_REGION_LENGTH__+0x700821>
+	TCC0_PER=0;    //timer per value to output 1760 Hz sine wave
+ 268:	10 92 26 08 	sts	0x0826, r1	; 0x800826 <__TEXT_REGION_LENGTH__+0x700826>
+ 26c:	10 92 27 08 	sts	0x0827, r1	; 0x800827 <__TEXT_REGION_LENGTH__+0x700827>
+	TCC0_CTRLA=TC_CLKSEL_DIV1_gc; //timer prescaler of 1
+ 270:	81 e0       	ldi	r24, 0x01	; 1
+ 272:	80 93 00 08 	sts	0x0800, r24	; 0x800800 <__TEXT_REGION_LENGTH__+0x700800>
+ 276:	08 95       	ret
+
+00000278 <USARTD0_init>:
+	
+}
+
+void USARTD0_init(void)
+{
+	PORTD_DIRSET=0x08;   //set transmitter as output
+ 278:	88 e0       	ldi	r24, 0x08	; 8
+ 27a:	80 93 61 06 	sts	0x0661, r24	; 0x800661 <__TEXT_REGION_LENGTH__+0x700661>
+	PORTD_DIRCLR=0X04;	 //set receiver as input
+ 27e:	94 e0       	ldi	r25, 0x04	; 4
+ 280:	90 93 62 06 	sts	0x0662, r25	; 0x800662 <__TEXT_REGION_LENGTH__+0x700662>
+	
+	USARTD0_CTRLB=0x18;  //enable receiver and transmitter
+ 284:	98 e1       	ldi	r25, 0x18	; 24
+ 286:	90 93 a4 09 	sts	0x09A4, r25	; 0x8009a4 <__TEXT_REGION_LENGTH__+0x7009a4>
+	USARTD0_CTRLC= 0X33; //USART asynchronous, 8 data bit, odd parity, 1 stop bit
+ 28a:	93 e3       	ldi	r25, 0x33	; 51
+ 28c:	90 93 a5 09 	sts	0x09A5, r25	; 0x8009a5 <__TEXT_REGION_LENGTH__+0x7009a5>
+	
+	USARTD0_BAUDCTRLA= (uint8_t) BSEL;    //load lowest 8 bits of BSEL
+ 290:	94 e8       	ldi	r25, 0x84	; 132
+ 292:	90 93 a6 09 	sts	0x09A6, r25	; 0x8009a6 <__TEXT_REGION_LENGTH__+0x7009a6>
+	USARTD0_BAUDCTRLB= (((uint8_t) BSELHIGH) | 0xE0); //load BSCALE and upper 4 bits of BSEL. bitwise OR them
+ 296:	90 ee       	ldi	r25, 0xE0	; 224
+ 298:	90 93 a7 09 	sts	0x09A7, r25	; 0x8009a7 <__TEXT_REGION_LENGTH__+0x7009a7>
+	
+	PORTD_OUTSET= 0x08;   //set transit pin idle
+ 29c:	80 93 65 06 	sts	0x0665, r24	; 0x800665 <__TEXT_REGION_LENGTH__+0x700665>
+ 2a0:	08 95       	ret
+
+000002a2 <IN_CHAR>:
+}
+
+
+uint8_t IN_CHAR(void) {
+	
+	while( (USARTD0_STATUS & 0x80) != 0x80);			//keep looping if DREIF flag is not set
+ 2a2:	e1 ea       	ldi	r30, 0xA1	; 161
+ 2a4:	f9 e0       	ldi	r31, 0x09	; 9
+ 2a6:	80 81       	ld	r24, Z
+ 2a8:	88 23       	and	r24, r24
+ 2aa:	ec f7       	brge	.-6      	; 0x2a6 <IN_CHAR+0x4>
+	
+	return USARTD0_DATA;
+ 2ac:	80 91 a0 09 	lds	r24, 0x09A0	; 0x8009a0 <__TEXT_REGION_LENGTH__+0x7009a0>
+	
+}
+ 2b0:	08 95       	ret
+
+000002b2 <OUT_CHAR>:
+
+void OUT_CHAR(uint8_t data) {
+	
+	while( ((USARTD0_STATUS) & 0x20) != 0x20);			//keep looping if DREIF flag is not set
+ 2b2:	e1 ea       	ldi	r30, 0xA1	; 161
+ 2b4:	f9 e0       	ldi	r31, 0x09	; 9
+ 2b6:	90 81       	ld	r25, Z
+ 2b8:	95 ff       	sbrs	r25, 5
+ 2ba:	fd cf       	rjmp	.-6      	; 0x2b6 <OUT_CHAR+0x4>
+	
+	USARTD0_DATA= (uint8_t) data;
+ 2bc:	80 93 a0 09 	sts	0x09A0, r24	; 0x8009a0 <__TEXT_REGION_LENGTH__+0x7009a0>
+ 2c0:	08 95       	ret
+
+000002c2 <CLK_32MHZ>:
+}
+
+void CLK_32MHZ(void)
+{
+	
+	OSC_CTRL=0x02;     //select the 32Mhz osciliator
+ 2c2:	82 e0       	ldi	r24, 0x02	; 2
+ 2c4:	80 93 50 00 	sts	0x0050, r24	; 0x800050 <__TEXT_REGION_LENGTH__+0x700050>
+	while ( ((OSC_STATUS) & 0x02) != 0x02 );   //check if 32Mhz oscillator is stable
+ 2c8:	e1 e5       	ldi	r30, 0x51	; 81
+ 2ca:	f0 e0       	ldi	r31, 0x00	; 0
+ 2cc:	80 81       	ld	r24, Z
+ 2ce:	81 ff       	sbrs	r24, 1
+ 2d0:	fd cf       	rjmp	.-6      	; 0x2cc <CLK_32MHZ+0xa>
+	//if not stable. keep looping
+	
+	CPU_CCP= 0xD8;                       //write IOREG to CPU_CCP to enable change
+ 2d2:	88 ed       	ldi	r24, 0xD8	; 216
+ 2d4:	84 bf       	out	0x34, r24	; 52
+	CLK_CTRL= 0x01;						//select the 32Mhz oscillator
+ 2d6:	91 e0       	ldi	r25, 0x01	; 1
+ 2d8:	90 93 40 00 	sts	0x0040, r25	; 0x800040 <__TEXT_REGION_LENGTH__+0x700040>
+	CPU_CCP= 0xD8;						//write IOREG to CPU_CCP to enable change
+ 2dc:	84 bf       	out	0x34, r24	; 52
+	CLK_PSCTRL= 0x00;					//0x00 for the prescaler
+ 2de:	10 92 41 00 	sts	0x0041, r1	; 0x800041 <__TEXT_REGION_LENGTH__+0x700041>
+ 2e2:	08 95       	ret
+
+000002e4 <main>:
+	//(1/1760)=512(1/x).   x is the number in Hz
+	
+	//sample rate(Hz)=output frequency x No. samples
+	
+	
+	CLK_32MHZ();
+ 2e4:	0e 94 61 01 	call	0x2c2	; 0x2c2 <CLK_32MHZ>
+	TIMER_INIT();
+ 2e8:	0e 94 30 01 	call	0x260	; 0x260 <TIMER_INIT>
+	DAC();
+ 2ec:	0e 94 26 01 	call	0x24c	; 0x24c <DAC>
+	USARTD0_init();
+ 2f0:	0e 94 3c 01 	call	0x278	; 0x278 <USARTD0_init>
+	
+	PORTA_DIRSET=PIN3_bm; //set PA3 as DAC1 output
+ 2f4:	88 e0       	ldi	r24, 0x08	; 8
+ 2f6:	80 93 01 06 	sts	0x0601, r24	; 0x800601 <__TEXT_REGION_LENGTH__+0x700601>
+	PORTC_DIRSET=PIN7_bm; //set POWER DOWN pin as output
+ 2fa:	80 e8       	ldi	r24, 0x80	; 128
+ 2fc:	80 93 41 06 	sts	0x0641, r24	; 0x800641 <__TEXT_REGION_LENGTH__+0x700641>
+	PORTC_OUTSET=PIN7_bm; //set POWER DOWN pin always high to prevent shutdown
+ 300:	80 93 45 06 	sts	0x0645, r24	; 0x800645 <__TEXT_REGION_LENGTH__+0x700645>
+			TCC0_PER=46;
+			} else if ((input=='I') && (change==-2)) {
+			TCC0_PER=54;
+		}
+		
+		TCC0_CNT=0x00;
+ 304:	00 e2       	ldi	r16, 0x20	; 32
+ 306:	18 e0       	ldi	r17, 0x08	; 8
+		
+		
+		if(change==-2) {
+			for(int i=0; i< 150;i++){
+				for (int i=0; i< 256;i++) {      //go through the 512 samples
+					while((TCC0_INTFLAGS & 0x01) != 0x01);   //wait for interrupt flag of sample rate to be set
+ 308:	cc e0       	ldi	r28, 0x0C	; 12
+ 30a:	d8 e0       	ldi	r29, 0x08	; 8
+					TCC0_INTFLAGS=0x01;   //clears the interrupt flag
+					
+					float sawtooth=i*(273/17);
+					DACA_CH1DATA=(int) sawtooth;   //DAC output value according to the formula
+ 30c:	0f 2e       	mov	r0, r31
+ 30e:	fa e1       	ldi	r31, 0x1A	; 26
+ 310:	ef 2e       	mov	r14, r31
+ 312:	f3 e0       	ldi	r31, 0x03	; 3
+ 314:	ff 2e       	mov	r15, r31
+ 316:	f0 2d       	mov	r31, r0
+ 318:	0f 2e       	mov	r0, r31
+ 31a:	f2 e0       	ldi	r31, 0x02	; 2
+ 31c:	cf 2e       	mov	r12, r31
+ 31e:	f2 e2       	ldi	r31, 0x22	; 34
+ 320:	df 2e       	mov	r13, r31
+ 322:	f0 2d       	mov	r31, r0
+		}
+		
+		if ((input=='I') && (change==2)) {
+			TCC0_PER=46;
+			} else if ((input=='I') && (change==-2)) {
+			TCC0_PER=54;
+ 324:	0f 2e       	mov	r0, r31
+ 326:	f6 e2       	ldi	r31, 0x26	; 38
+ 328:	af 2e       	mov	r10, r31
+ 32a:	f8 e0       	ldi	r31, 0x08	; 8
+ 32c:	bf 2e       	mov	r11, r31
+ 32e:	f0 2d       	mov	r31, r0
+	PORTC_OUTSET=PIN7_bm; //set POWER DOWN pin always high to prevent shutdown
+	
+	while(1) {
+		
+		CHECK:;
+		input=IN_CHAR();
+ 330:	0e 94 51 01 	call	0x2a2	; 0x2a2 <IN_CHAR>
+ 334:	80 93 02 22 	sts	0x2202, r24	; 0x802202 <__data_end>
+		OUT_CHAR(input);
+ 338:	0e 94 59 01 	call	0x2b2	; 0x2b2 <OUT_CHAR>
+		
+		if ((input != 'S') && (input != 'W') && (input != '3') && (input != 'E') && (input != '4') && (input != 'R')
+ 33c:	80 91 02 22 	lds	r24, 0x2202	; 0x802202 <__data_end>
+ 340:	83 35       	cpi	r24, 0x53	; 83
+ 342:	d1 f0       	breq	.+52     	; 0x378 <main+0x94>
+ 344:	87 35       	cpi	r24, 0x57	; 87
+ 346:	21 f1       	breq	.+72     	; 0x390 <main+0xac>
+ 348:	9d ec       	ldi	r25, 0xCD	; 205
+ 34a:	98 0f       	add	r25, r24
+ 34c:	92 30       	cpi	r25, 0x02	; 2
+ 34e:	a0 f1       	brcs	.+104    	; 0x3b8 <main+0xd4>
+ 350:	85 34       	cpi	r24, 0x45	; 69
+ 352:	09 f4       	brne	.+2      	; 0x356 <main+0x72>
+ 354:	49 c0       	rjmp	.+146    	; 0x3e8 <main+0x104>
+ 356:	82 35       	cpi	r24, 0x52	; 82
+ 358:	09 f4       	brne	.+2      	; 0x35c <main+0x78>
+ 35a:	46 c0       	rjmp	.+140    	; 0x3e8 <main+0x104>
+		&& (input != 'T') && (input !='6') && (input !='Y') && (input != '7') && (input != 'U') && (input != '8') && (input != 'I')) {
+ 35c:	9c ea       	ldi	r25, 0xAC	; 172
+ 35e:	98 0f       	add	r25, r24
+ 360:	92 30       	cpi	r25, 0x02	; 2
+ 362:	08 f4       	brcc	.+2      	; 0x366 <main+0x82>
+ 364:	7c c1       	rjmp	.+760    	; 0x65e <__LOCK_REGION_LENGTH__+0x25e>
+ 366:	9a ec       	ldi	r25, 0xCA	; 202
+ 368:	98 0f       	add	r25, r24
+ 36a:	93 30       	cpi	r25, 0x03	; 3
+ 36c:	08 f4       	brcc	.+2      	; 0x370 <main+0x8c>
+ 36e:	77 c1       	rjmp	.+750    	; 0x65e <__LOCK_REGION_LENGTH__+0x25e>
+ 370:	8f 7e       	andi	r24, 0xEF	; 239
+ 372:	89 34       	cpi	r24, 0x49	; 73
+ 374:	e9 f6       	brne	.-70     	; 0x330 <main+0x4c>
+ 376:	73 c1       	rjmp	.+742    	; 0x65e <__LOCK_REGION_LENGTH__+0x25e>
+			goto CHECK;
+			
+		}
+		
+		if (input=='S') {
+			change=change *(-1);       //2 means sine, -2 means sawtooth
+ 378:	80 91 00 20 	lds	r24, 0x2000	; 0x802000 <__data_start>
+ 37c:	90 91 01 20 	lds	r25, 0x2001	; 0x802001 <__data_start+0x1>
+ 380:	91 95       	neg	r25
+ 382:	81 95       	neg	r24
+ 384:	91 09       	sbc	r25, r1
+ 386:	80 93 00 20 	sts	0x2000, r24	; 0x802000 <__data_start>
+ 38a:	90 93 01 20 	sts	0x2001, r25	; 0x802001 <__data_start+0x1>
+			goto CHECK;
+ 38e:	d0 cf       	rjmp	.-96     	; 0x330 <main+0x4c>
+		}
+		
+		if ((input=='W') && (change==2)) {
+ 390:	80 91 00 20 	lds	r24, 0x2000	; 0x802000 <__data_start>
+ 394:	90 91 01 20 	lds	r25, 0x2001	; 0x802001 <__data_start+0x1>
+ 398:	82 30       	cpi	r24, 0x02	; 2
+ 39a:	91 05       	cpc	r25, r1
+ 39c:	31 f4       	brne	.+12     	; 0x3aa <main+0xc6>
+			TCC0_PER=103;
+ 39e:	87 e6       	ldi	r24, 0x67	; 103
+ 3a0:	90 e0       	ldi	r25, 0x00	; 0
+ 3a2:	d5 01       	movw	r26, r10
+ 3a4:	8d 93       	st	X+, r24
+ 3a6:	9c 93       	st	X, r25
+ 3a8:	07 c0       	rjmp	.+14     	; 0x3b8 <main+0xd4>
+			} else if ((input=='W') && (change==-2)) {
+ 3aa:	02 96       	adiw	r24, 0x02	; 2
+ 3ac:	a9 f5       	brne	.+106    	; 0x418 <__LOCK_REGION_LENGTH__+0x18>
+			TCC0_PER=112;
+ 3ae:	80 e7       	ldi	r24, 0x70	; 112
+ 3b0:	90 e0       	ldi	r25, 0x00	; 0
+ 3b2:	f5 01       	movw	r30, r10
+ 3b4:	80 83       	st	Z, r24
+ 3b6:	91 83       	std	Z+1, r25	; 0x01
+		}
+		
+		if ((input=='3') && (change==2)) {
+ 3b8:	80 91 02 22 	lds	r24, 0x2202	; 0x802202 <__data_end>
+ 3bc:	83 33       	cpi	r24, 0x33	; 51
+ 3be:	a1 f4       	brne	.+40     	; 0x3e8 <main+0x104>
+ 3c0:	80 91 00 20 	lds	r24, 0x2000	; 0x802000 <__data_start>
+ 3c4:	90 91 01 20 	lds	r25, 0x2001	; 0x802001 <__data_start+0x1>
+ 3c8:	82 30       	cpi	r24, 0x02	; 2
+ 3ca:	91 05       	cpc	r25, r1
+ 3cc:	31 f4       	brne	.+12     	; 0x3da <main+0xf6>
+			TCC0_PER=95;
+ 3ce:	8f e5       	ldi	r24, 0x5F	; 95
+ 3d0:	90 e0       	ldi	r25, 0x00	; 0
+ 3d2:	d5 01       	movw	r26, r10
+ 3d4:	8d 93       	st	X+, r24
+ 3d6:	9c 93       	st	X, r25
+ 3d8:	07 c0       	rjmp	.+14     	; 0x3e8 <main+0x104>
+			} else if ((input=='3') && (change==-2)) {
+ 3da:	02 96       	adiw	r24, 0x02	; 2
+ 3dc:	a9 f5       	brne	.+106    	; 0x448 <__LOCK_REGION_LENGTH__+0x48>
+			TCC0_PER=103;
+ 3de:	87 e6       	ldi	r24, 0x67	; 103
+ 3e0:	90 e0       	ldi	r25, 0x00	; 0
+ 3e2:	f5 01       	movw	r30, r10
+ 3e4:	80 83       	st	Z, r24
+ 3e6:	91 83       	std	Z+1, r25	; 0x01
+		}
+		
+		if ((input=='E') && (change==2)) {
+ 3e8:	80 91 02 22 	lds	r24, 0x2202	; 0x802202 <__data_end>
+ 3ec:	85 34       	cpi	r24, 0x45	; 69
+ 3ee:	a1 f4       	brne	.+40     	; 0x418 <__LOCK_REGION_LENGTH__+0x18>
+ 3f0:	80 91 00 20 	lds	r24, 0x2000	; 0x802000 <__data_start>
+ 3f4:	90 91 01 20 	lds	r25, 0x2001	; 0x802001 <__data_start+0x1>
+ 3f8:	82 30       	cpi	r24, 0x02	; 2
+ 3fa:	91 05       	cpc	r25, r1
+ 3fc:	31 f4       	brne	.+12     	; 0x40a <__LOCK_REGION_LENGTH__+0xa>
+			TCC0_PER=91;
+ 3fe:	8b e5       	ldi	r24, 0x5B	; 91
+ 400:	90 e0       	ldi	r25, 0x00	; 0
+ 402:	d5 01       	movw	r26, r10
+ 404:	8d 93       	st	X+, r24
+ 406:	9c 93       	st	X, r25
+ 408:	07 c0       	rjmp	.+14     	; 0x418 <__LOCK_REGION_LENGTH__+0x18>
+			} else if ((input=='E') && (change==-2)) {
+ 40a:	02 96       	adiw	r24, 0x02	; 2
+ 40c:	a9 f5       	brne	.+106    	; 0x478 <__LOCK_REGION_LENGTH__+0x78>
+			TCC0_PER=97;
+ 40e:	81 e6       	ldi	r24, 0x61	; 97
+ 410:	90 e0       	ldi	r25, 0x00	; 0
+ 412:	f5 01       	movw	r30, r10
+ 414:	80 83       	st	Z, r24
+ 416:	91 83       	std	Z+1, r25	; 0x01
+		}
+		
+		if ((input=='4') && (change==2)) {
+ 418:	80 91 02 22 	lds	r24, 0x2202	; 0x802202 <__data_end>
+ 41c:	84 33       	cpi	r24, 0x34	; 52
+ 41e:	a1 f4       	brne	.+40     	; 0x448 <__LOCK_REGION_LENGTH__+0x48>
+ 420:	80 91 00 20 	lds	r24, 0x2000	; 0x802000 <__data_start>
+ 424:	90 91 01 20 	lds	r25, 0x2001	; 0x802001 <__data_start+0x1>
+ 428:	82 30       	cpi	r24, 0x02	; 2
+ 42a:	91 05       	cpc	r25, r1
+ 42c:	31 f4       	brne	.+12     	; 0x43a <__LOCK_REGION_LENGTH__+0x3a>
+			TCC0_PER=85;
+ 42e:	85 e5       	ldi	r24, 0x55	; 85
+ 430:	90 e0       	ldi	r25, 0x00	; 0
+ 432:	d5 01       	movw	r26, r10
+ 434:	8d 93       	st	X+, r24
+ 436:	9c 93       	st	X, r25
+ 438:	07 c0       	rjmp	.+14     	; 0x448 <__LOCK_REGION_LENGTH__+0x48>
+			} else if ((input=='4') && (change==-2)) {
+ 43a:	02 96       	adiw	r24, 0x02	; 2
+ 43c:	a9 f5       	brne	.+106    	; 0x4a8 <__LOCK_REGION_LENGTH__+0xa8>
+			TCC0_PER=90;
+ 43e:	8a e5       	ldi	r24, 0x5A	; 90
+ 440:	90 e0       	ldi	r25, 0x00	; 0
+ 442:	f5 01       	movw	r30, r10
+ 444:	80 83       	st	Z, r24
+ 446:	91 83       	std	Z+1, r25	; 0x01
+		}
+		
+		if ((input=='R') && (change==2)) {
+ 448:	80 91 02 22 	lds	r24, 0x2202	; 0x802202 <__data_end>
+ 44c:	82 35       	cpi	r24, 0x52	; 82
+ 44e:	a1 f4       	brne	.+40     	; 0x478 <__LOCK_REGION_LENGTH__+0x78>
+ 450:	80 91 00 20 	lds	r24, 0x2000	; 0x802000 <__data_start>
+ 454:	90 91 01 20 	lds	r25, 0x2001	; 0x802001 <__data_start+0x1>
+ 458:	82 30       	cpi	r24, 0x02	; 2
+ 45a:	91 05       	cpc	r25, r1
+ 45c:	31 f4       	brne	.+12     	; 0x46a <__LOCK_REGION_LENGTH__+0x6a>
+			TCC0_PER=77;
+ 45e:	8d e4       	ldi	r24, 0x4D	; 77
+ 460:	90 e0       	ldi	r25, 0x00	; 0
+ 462:	d5 01       	movw	r26, r10
+ 464:	8d 93       	st	X+, r24
+ 466:	9c 93       	st	X, r25
+ 468:	07 c0       	rjmp	.+14     	; 0x478 <__LOCK_REGION_LENGTH__+0x78>
+			} else if ((input=='R') && (change==-2)) {
+ 46a:	02 96       	adiw	r24, 0x02	; 2
+ 46c:	a9 f5       	brne	.+106    	; 0x4d8 <__LOCK_REGION_LENGTH__+0xd8>
+			TCC0_PER=85;
+ 46e:	85 e5       	ldi	r24, 0x55	; 85
+ 470:	90 e0       	ldi	r25, 0x00	; 0
+ 472:	f5 01       	movw	r30, r10
+ 474:	80 83       	st	Z, r24
+ 476:	91 83       	std	Z+1, r25	; 0x01
+		}
+		
+		if ((input=='T') && (change==2)) {
+ 478:	80 91 02 22 	lds	r24, 0x2202	; 0x802202 <__data_end>
+ 47c:	84 35       	cpi	r24, 0x54	; 84
+ 47e:	a1 f4       	brne	.+40     	; 0x4a8 <__LOCK_REGION_LENGTH__+0xa8>
+ 480:	80 91 00 20 	lds	r24, 0x2000	; 0x802000 <__data_start>
+ 484:	90 91 01 20 	lds	r25, 0x2001	; 0x802001 <__data_start+0x1>
+ 488:	82 30       	cpi	r24, 0x02	; 2
+ 48a:	91 05       	cpc	r25, r1
+ 48c:	31 f4       	brne	.+12     	; 0x49a <__LOCK_REGION_LENGTH__+0x9a>
+			TCC0_PER=72;
+ 48e:	88 e4       	ldi	r24, 0x48	; 72
+ 490:	90 e0       	ldi	r25, 0x00	; 0
+ 492:	d5 01       	movw	r26, r10
+ 494:	8d 93       	st	X+, r24
+ 496:	9c 93       	st	X, r25
+ 498:	07 c0       	rjmp	.+14     	; 0x4a8 <__LOCK_REGION_LENGTH__+0xa8>
+			} else if ((input=='T') && (change==-2)) {
+ 49a:	02 96       	adiw	r24, 0x02	; 2
+ 49c:	a9 f5       	brne	.+106    	; 0x508 <__LOCK_REGION_LENGTH__+0x108>
+			TCC0_PER=79;
+ 49e:	8f e4       	ldi	r24, 0x4F	; 79
+ 4a0:	90 e0       	ldi	r25, 0x00	; 0
+ 4a2:	f5 01       	movw	r30, r10
+ 4a4:	80 83       	st	Z, r24
+ 4a6:	91 83       	std	Z+1, r25	; 0x01
+		}
+		
+		if ((input=='6') && (change==2)) {
+ 4a8:	80 91 02 22 	lds	r24, 0x2202	; 0x802202 <__data_end>
+ 4ac:	86 33       	cpi	r24, 0x36	; 54
+ 4ae:	a1 f4       	brne	.+40     	; 0x4d8 <__LOCK_REGION_LENGTH__+0xd8>
+ 4b0:	80 91 00 20 	lds	r24, 0x2000	; 0x802000 <__data_start>
+ 4b4:	90 91 01 20 	lds	r25, 0x2001	; 0x802001 <__data_start+0x1>
+ 4b8:	82 30       	cpi	r24, 0x02	; 2
+ 4ba:	91 05       	cpc	r25, r1
+ 4bc:	31 f4       	brne	.+12     	; 0x4ca <__LOCK_REGION_LENGTH__+0xca>
+			TCC0_PER=69;
+ 4be:	85 e4       	ldi	r24, 0x45	; 69
+ 4c0:	90 e0       	ldi	r25, 0x00	; 0
+ 4c2:	d5 01       	movw	r26, r10
+ 4c4:	8d 93       	st	X+, r24
+ 4c6:	9c 93       	st	X, r25
+ 4c8:	07 c0       	rjmp	.+14     	; 0x4d8 <__LOCK_REGION_LENGTH__+0xd8>
+			} else if ((input=='6') && (change==-2)) {
+ 4ca:	02 96       	adiw	r24, 0x02	; 2
+ 4cc:	a9 f5       	brne	.+106    	; 0x538 <__LOCK_REGION_LENGTH__+0x138>
+			TCC0_PER=75;
+ 4ce:	8b e4       	ldi	r24, 0x4B	; 75
+ 4d0:	90 e0       	ldi	r25, 0x00	; 0
+ 4d2:	f5 01       	movw	r30, r10
+ 4d4:	80 83       	st	Z, r24
+ 4d6:	91 83       	std	Z+1, r25	; 0x01
+		}
+		
+		if ((input=='Y') && (change==2)) {
+ 4d8:	80 91 02 22 	lds	r24, 0x2202	; 0x802202 <__data_end>
+ 4dc:	89 35       	cpi	r24, 0x59	; 89
+ 4de:	a1 f4       	brne	.+40     	; 0x508 <__LOCK_REGION_LENGTH__+0x108>
+ 4e0:	80 91 00 20 	lds	r24, 0x2000	; 0x802000 <__data_start>
+ 4e4:	90 91 01 20 	lds	r25, 0x2001	; 0x802001 <__data_start+0x1>
+ 4e8:	82 30       	cpi	r24, 0x02	; 2
+ 4ea:	91 05       	cpc	r25, r1
+ 4ec:	31 f4       	brne	.+12     	; 0x4fa <__LOCK_REGION_LENGTH__+0xfa>
+			TCC0_PER=61;
+ 4ee:	8d e3       	ldi	r24, 0x3D	; 61
+ 4f0:	90 e0       	ldi	r25, 0x00	; 0
+ 4f2:	d5 01       	movw	r26, r10
+ 4f4:	8d 93       	st	X+, r24
+ 4f6:	9c 93       	st	X, r25
+ 4f8:	07 c0       	rjmp	.+14     	; 0x508 <__LOCK_REGION_LENGTH__+0x108>
+			} else if ((input=='Y') && (change==-2)) {
+ 4fa:	02 96       	adiw	r24, 0x02	; 2
+ 4fc:	a9 f5       	brne	.+106    	; 0x568 <__LOCK_REGION_LENGTH__+0x168>
+			TCC0_PER=71;
+ 4fe:	87 e4       	ldi	r24, 0x47	; 71
+ 500:	90 e0       	ldi	r25, 0x00	; 0
+ 502:	f5 01       	movw	r30, r10
+ 504:	80 83       	st	Z, r24
+ 506:	91 83       	std	Z+1, r25	; 0x01
+		}
+		
+		if ((input=='7') && (change==2)) {
+ 508:	80 91 02 22 	lds	r24, 0x2202	; 0x802202 <__data_end>
+ 50c:	87 33       	cpi	r24, 0x37	; 55
+ 50e:	a1 f4       	brne	.+40     	; 0x538 <__LOCK_REGION_LENGTH__+0x138>
+ 510:	80 91 00 20 	lds	r24, 0x2000	; 0x802000 <__data_start>
+ 514:	90 91 01 20 	lds	r25, 0x2001	; 0x802001 <__data_start+0x1>
+ 518:	82 30       	cpi	r24, 0x02	; 2
+ 51a:	91 05       	cpc	r25, r1
+ 51c:	31 f4       	brne	.+12     	; 0x52a <__LOCK_REGION_LENGTH__+0x12a>
+			TCC0_PER=57;
+ 51e:	89 e3       	ldi	r24, 0x39	; 57
+ 520:	90 e0       	ldi	r25, 0x00	; 0
+ 522:	d5 01       	movw	r26, r10
+ 524:	8d 93       	st	X+, r24
+ 526:	9c 93       	st	X, r25
+ 528:	07 c0       	rjmp	.+14     	; 0x538 <__LOCK_REGION_LENGTH__+0x138>
+			} else if ((input=='7') && (change==-2)) {
+ 52a:	02 96       	adiw	r24, 0x02	; 2
+ 52c:	a9 f5       	brne	.+106    	; 0x598 <__LOCK_REGION_LENGTH__+0x198>
+			TCC0_PER=66;
+ 52e:	82 e4       	ldi	r24, 0x42	; 66
+ 530:	90 e0       	ldi	r25, 0x00	; 0
+ 532:	f5 01       	movw	r30, r10
+ 534:	80 83       	st	Z, r24
+ 536:	91 83       	std	Z+1, r25	; 0x01
+		}
+		
+		if ((input=='U') && (change==2)) {
+ 538:	80 91 02 22 	lds	r24, 0x2202	; 0x802202 <__data_end>
+ 53c:	85 35       	cpi	r24, 0x55	; 85
+ 53e:	a1 f4       	brne	.+40     	; 0x568 <__LOCK_REGION_LENGTH__+0x168>
+ 540:	80 91 00 20 	lds	r24, 0x2000	; 0x802000 <__data_start>
+ 544:	90 91 01 20 	lds	r25, 0x2001	; 0x802001 <__data_start+0x1>
+ 548:	82 30       	cpi	r24, 0x02	; 2
+ 54a:	91 05       	cpc	r25, r1
+ 54c:	31 f4       	brne	.+12     	; 0x55a <__LOCK_REGION_LENGTH__+0x15a>
+			TCC0_PER=54;
+ 54e:	86 e3       	ldi	r24, 0x36	; 54
+ 550:	90 e0       	ldi	r25, 0x00	; 0
+ 552:	d5 01       	movw	r26, r10
+ 554:	8d 93       	st	X+, r24
+ 556:	9c 93       	st	X, r25
+ 558:	07 c0       	rjmp	.+14     	; 0x568 <__LOCK_REGION_LENGTH__+0x168>
+			} else if ((input=='U') && (change==-2)) {
+ 55a:	02 96       	adiw	r24, 0x02	; 2
+ 55c:	a9 f5       	brne	.+106    	; 0x5c8 <__LOCK_REGION_LENGTH__+0x1c8>
+			TCC0_PER=62;
+ 55e:	8e e3       	ldi	r24, 0x3E	; 62
+ 560:	90 e0       	ldi	r25, 0x00	; 0
+ 562:	f5 01       	movw	r30, r10
+ 564:	80 83       	st	Z, r24
+ 566:	91 83       	std	Z+1, r25	; 0x01
+		}
+		
+		if ((input=='8') && (change==2)) {
+ 568:	80 91 02 22 	lds	r24, 0x2202	; 0x802202 <__data_end>
+ 56c:	88 33       	cpi	r24, 0x38	; 56
+ 56e:	a1 f4       	brne	.+40     	; 0x598 <__LOCK_REGION_LENGTH__+0x198>
+ 570:	80 91 00 20 	lds	r24, 0x2000	; 0x802000 <__data_start>
+ 574:	90 91 01 20 	lds	r25, 0x2001	; 0x802001 <__data_start+0x1>
+ 578:	82 30       	cpi	r24, 0x02	; 2
+ 57a:	91 05       	cpc	r25, r1
+ 57c:	31 f4       	brne	.+12     	; 0x58a <__LOCK_REGION_LENGTH__+0x18a>
+			TCC0_PER=50;
+ 57e:	82 e3       	ldi	r24, 0x32	; 50
+ 580:	90 e0       	ldi	r25, 0x00	; 0
+ 582:	d5 01       	movw	r26, r10
+ 584:	8d 93       	st	X+, r24
+ 586:	9c 93       	st	X, r25
+ 588:	07 c0       	rjmp	.+14     	; 0x598 <__LOCK_REGION_LENGTH__+0x198>
+			} else if ((input=='8') && (change==-2)) {
+ 58a:	02 96       	adiw	r24, 0x02	; 2
+ 58c:	e9 f4       	brne	.+58     	; 0x5c8 <__LOCK_REGION_LENGTH__+0x1c8>
+			TCC0_PER=58;
+ 58e:	8a e3       	ldi	r24, 0x3A	; 58
+ 590:	90 e0       	ldi	r25, 0x00	; 0
+ 592:	f5 01       	movw	r30, r10
+ 594:	80 83       	st	Z, r24
+ 596:	91 83       	std	Z+1, r25	; 0x01
+		}
+		
+		if ((input=='I') && (change==2)) {
+ 598:	80 91 02 22 	lds	r24, 0x2202	; 0x802202 <__data_end>
+ 59c:	89 34       	cpi	r24, 0x49	; 73
+ 59e:	a1 f4       	brne	.+40     	; 0x5c8 <__LOCK_REGION_LENGTH__+0x1c8>
+ 5a0:	80 91 00 20 	lds	r24, 0x2000	; 0x802000 <__data_start>
+ 5a4:	90 91 01 20 	lds	r25, 0x2001	; 0x802001 <__data_start+0x1>
+ 5a8:	82 30       	cpi	r24, 0x02	; 2
+ 5aa:	91 05       	cpc	r25, r1
+ 5ac:	31 f4       	brne	.+12     	; 0x5ba <__LOCK_REGION_LENGTH__+0x1ba>
+			TCC0_PER=46;
+ 5ae:	8e e2       	ldi	r24, 0x2E	; 46
+ 5b0:	90 e0       	ldi	r25, 0x00	; 0
+ 5b2:	d5 01       	movw	r26, r10
+ 5b4:	8d 93       	st	X+, r24
+ 5b6:	9c 93       	st	X, r25
+ 5b8:	07 c0       	rjmp	.+14     	; 0x5c8 <__LOCK_REGION_LENGTH__+0x1c8>
+			} else if ((input=='I') && (change==-2)) {
+ 5ba:	02 96       	adiw	r24, 0x02	; 2
+ 5bc:	29 f4       	brne	.+10     	; 0x5c8 <__LOCK_REGION_LENGTH__+0x1c8>
+			TCC0_PER=54;
+ 5be:	86 e3       	ldi	r24, 0x36	; 54
+ 5c0:	90 e0       	ldi	r25, 0x00	; 0
+ 5c2:	f5 01       	movw	r30, r10
+ 5c4:	80 83       	st	Z, r24
+ 5c6:	91 83       	std	Z+1, r25	; 0x01
+		}
+		
+		TCC0_CNT=0x00;
+ 5c8:	d8 01       	movw	r26, r16
+ 5ca:	1d 92       	st	X+, r1
+ 5cc:	1c 92       	st	X, r1
+		
+		
+		
+		if (change==2) {
+ 5ce:	80 91 00 20 	lds	r24, 0x2000	; 0x802000 <__data_start>
+ 5d2:	90 91 01 20 	lds	r25, 0x2001	; 0x802001 <__data_start+0x1>
+ 5d6:	82 30       	cpi	r24, 0x02	; 2
+ 5d8:	91 05       	cpc	r25, r1
+ 5da:	09 f0       	breq	.+2      	; 0x5de <__LOCK_REGION_LENGTH__+0x1de>
+ 5dc:	3c c0       	rjmp	.+120    	; 0x656 <__LOCK_REGION_LENGTH__+0x256>
+ 5de:	13 c0       	rjmp	.+38     	; 0x606 <__LOCK_REGION_LENGTH__+0x206>
+			for(int i=0; i< 150;i++){
+				for (int i=0; i< 256;i++) {      //go through the 512 samples
+					while((TCC0_INTFLAGS & 0x01) != 0x01);   //wait for interrupt flag of sample rate to be set
+ 5e0:	88 81       	ld	r24, Y
+ 5e2:	80 ff       	sbrs	r24, 0
+ 5e4:	fd cf       	rjmp	.-6      	; 0x5e0 <__LOCK_REGION_LENGTH__+0x1e0>
+					TCC0_INTFLAGS=0x01;   //clears the interrupt flag
+ 5e6:	28 83       	st	Y, r18
+					
+					DACA_CH1DATA=Table[i];   //DAC output value according to the formula
+ 5e8:	81 91       	ld	r24, Z+
+ 5ea:	91 91       	ld	r25, Z+
+ 5ec:	d7 01       	movw	r26, r14
+ 5ee:	8d 93       	st	X+, r24
+ 5f0:	9c 93       	st	X, r25
+					
+					TCC0_CNT=0x00;    //reset TCC0_CNT to 0
+ 5f2:	d8 01       	movw	r26, r16
+ 5f4:	1d 92       	st	X+, r1
+ 5f6:	1c 92       	st	X, r1
+		
+		
+		
+		if (change==2) {
+			for(int i=0; i< 150;i++){
+				for (int i=0; i< 256;i++) {      //go through the 512 samples
+ 5f8:	ce 16       	cp	r12, r30
+ 5fa:	df 06       	cpc	r13, r31
+ 5fc:	89 f7       	brne	.-30     	; 0x5e0 <__LOCK_REGION_LENGTH__+0x1e0>
+ 5fe:	41 50       	subi	r20, 0x01	; 1
+ 600:	51 09       	sbc	r21, r1
+		TCC0_CNT=0x00;
+		
+		
+		
+		if (change==2) {
+			for(int i=0; i< 150;i++){
+ 602:	21 f4       	brne	.+8      	; 0x60c <__LOCK_REGION_LENGTH__+0x20c>
+ 604:	06 c0       	rjmp	.+12     	; 0x612 <__LOCK_REGION_LENGTH__+0x212>
+ 606:	4b e4       	ldi	r20, 0x4B	; 75
+ 608:	50 e0       	ldi	r21, 0x00	; 0
+				for (int i=0; i< 256;i++) {      //go through the 512 samples
+					while((TCC0_INTFLAGS & 0x01) != 0x01);   //wait for interrupt flag of sample rate to be set
+					TCC0_INTFLAGS=0x01;   //clears the interrupt flag
+ 60a:	21 e0       	ldi	r18, 0x01	; 1
+ 60c:	e2 e0       	ldi	r30, 0x02	; 2
+ 60e:	f0 e2       	ldi	r31, 0x20	; 32
+ 610:	e7 cf       	rjmp	.-50     	; 0x5e0 <__LOCK_REGION_LENGTH__+0x1e0>
+		}
+		
+		
+		
+		
+		if(change==-2) {
+ 612:	80 91 00 20 	lds	r24, 0x2000	; 0x802000 <__data_start>
+ 616:	90 91 01 20 	lds	r25, 0x2001	; 0x802001 <__data_start+0x1>
+ 61a:	02 96       	adiw	r24, 0x02	; 2
+ 61c:	09 f0       	breq	.+2      	; 0x620 <__LOCK_REGION_LENGTH__+0x220>
+ 61e:	88 ce       	rjmp	.-752    	; 0x330 <main+0x4c>
+ 620:	14 c0       	rjmp	.+40     	; 0x64a <__LOCK_REGION_LENGTH__+0x24a>
+			for(int i=0; i< 150;i++){
+				for (int i=0; i< 256;i++) {      //go through the 512 samples
+					while((TCC0_INTFLAGS & 0x01) != 0x01);   //wait for interrupt flag of sample rate to be set
+ 622:	88 81       	ld	r24, Y
+ 624:	80 ff       	sbrs	r24, 0
+ 626:	fd cf       	rjmp	.-6      	; 0x622 <__LOCK_REGION_LENGTH__+0x222>
+					TCC0_INTFLAGS=0x01;   //clears the interrupt flag
+ 628:	98 83       	st	Y, r25
+					
+					float sawtooth=i*(273/17);
+					DACA_CH1DATA=(int) sawtooth;   //DAC output value according to the formula
+ 62a:	f7 01       	movw	r30, r14
+ 62c:	20 83       	st	Z, r18
+ 62e:	31 83       	std	Z+1, r19	; 0x01
+					
+					TCC0_CNT=0x00;    //reset TCC0_CNT to 0
+ 630:	d8 01       	movw	r26, r16
+ 632:	1d 92       	st	X+, r1
+ 634:	1c 92       	st	X, r1
+ 636:	20 5f       	subi	r18, 0xF0	; 240
+ 638:	3f 4f       	sbci	r19, 0xFF	; 255
+		
+		
+		
+		if(change==-2) {
+			for(int i=0; i< 150;i++){
+				for (int i=0; i< 256;i++) {      //go through the 512 samples
+ 63a:	21 15       	cp	r18, r1
+ 63c:	b0 e1       	ldi	r27, 0x10	; 16
+ 63e:	3b 07       	cpc	r19, r27
+ 640:	81 f7       	brne	.-32     	; 0x622 <__LOCK_REGION_LENGTH__+0x222>
+ 642:	41 50       	subi	r20, 0x01	; 1
+ 644:	51 09       	sbc	r21, r1
+		
+		
+		
+		
+		if(change==-2) {
+			for(int i=0; i< 150;i++){
+ 646:	21 f4       	brne	.+8      	; 0x650 <__LOCK_REGION_LENGTH__+0x250>
+ 648:	73 ce       	rjmp	.-794    	; 0x330 <main+0x4c>
+ 64a:	4b e4       	ldi	r20, 0x4B	; 75
+ 64c:	50 e0       	ldi	r21, 0x00	; 0
+				for (int i=0; i< 256;i++) {      //go through the 512 samples
+					while((TCC0_INTFLAGS & 0x01) != 0x01);   //wait for interrupt flag of sample rate to be set
+					TCC0_INTFLAGS=0x01;   //clears the interrupt flag
+ 64e:	91 e0       	ldi	r25, 0x01	; 1
+ 650:	20 e0       	ldi	r18, 0x00	; 0
+ 652:	30 e0       	ldi	r19, 0x00	; 0
+ 654:	e6 cf       	rjmp	.-52     	; 0x622 <__LOCK_REGION_LENGTH__+0x222>
+		}
+		
+		
+		
+		
+		if(change==-2) {
+ 656:	02 96       	adiw	r24, 0x02	; 2
+ 658:	09 f0       	breq	.+2      	; 0x65c <__LOCK_REGION_LENGTH__+0x25c>
+ 65a:	6a ce       	rjmp	.-812    	; 0x330 <main+0x4c>
+ 65c:	f6 cf       	rjmp	.-20     	; 0x64a <__LOCK_REGION_LENGTH__+0x24a>
+			TCC0_PER=103;
+			} else if ((input=='W') && (change==-2)) {
+			TCC0_PER=112;
+		}
+		
+		if ((input=='3') && (change==2)) {
+ 65e:	80 91 02 22 	lds	r24, 0x2202	; 0x802202 <__data_end>
+ 662:	83 33       	cpi	r24, 0x33	; 51
+ 664:	09 f0       	breq	.+2      	; 0x668 <__LOCK_REGION_LENGTH__+0x268>
+ 666:	d8 ce       	rjmp	.-592    	; 0x418 <__LOCK_REGION_LENGTH__+0x18>
+ 668:	ab ce       	rjmp	.-682    	; 0x3c0 <main+0xdc>
+
+0000066a <_exit>:
+ 66a:	f8 94       	cli
+
+0000066c <__stop_program>:
+ 66c:	ff cf       	rjmp	.-2      	; 0x66c <__stop_program>
